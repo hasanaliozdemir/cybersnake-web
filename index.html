@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CyberSnake - Premium Neon Snake Game | iOS & Android</title>
+    <meta name="description"
+        content="Download CyberSnake, a premium mobile snake game with cyberpunk aesthetics, power-ups, and global leaderboards. Free on iOS and Android!">
+    <meta name="keywords" content="snake game, mobile game, cyberpunk, neon, iOS game, Android game, free game">
+    <meta property="og:title" content="CyberSnake - Premium Neon Snake Game">
+    <meta property="og:description" content="A stunning snake game with cyberpunk visuals and addictive gameplay">
+    <meta property="og:image" content="/images/og-image.png">
+    <meta property="og:url" content="https://cybersnake.app">
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <link rel="apple-touch-icon" href="/assets/icon.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&family=Press+Start+2P&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="/assets/icon_wob.png" alt="CyberSnake logo" width="48" height="48">
+                <span class="brand">CyberSnake</span>
+            </a>
+            <nav class="nav">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="#download">Download</a>
+            </nav>
+            <div class="lang-compact" id="header-lang" aria-haspopup="true">
+                <button id="lang-toggle" aria-expanded="false" aria-controls="lang-menu">
+                    <img src="/assets/icon.png" alt="Lang" />
+                    <span id="current-lang">EN</span>
+                </button>
+                <div class="lang-menu" id="lang-menu" role="menu">
+                    <a href="/index.html" data-lang="en" role="menuitem">English</a>
+                    <a href="/index.tr.html" data-lang="tr" role="menuitem">Türkçe</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-inner">
+                <div class="hero-content">
+                    <h1 class="title">🐍 CYBERSNAKE: NEON ADVENTURE</h1>
+                    <p class="tagline">A Premium Snake Game with Cyberpunk Aesthetics</p>
+                    <div class="cta-row" id="download">
+                        <a href="https://apps.apple.com/app/id6441234567">
+                            <img src="/assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg"
+                                alt="Download on the App Store" class="store-badge">
+                        </a>
+                    </div>
+                    <p class="small">Available on iOS • Free to play</p>
+                </div>
+                <div class="hero-media">
+                    <div class="app-icon">
+                        <img src="/assets/icon_wob.png" height="160" width="160" alt="Game screenshot" />
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots">
+            <div class="container">
+                <h2>Game Screenshots</h2>
+                <div class="carousel" id="carousel">
+                    <div class="slide"><img src="/images/screenshots/screen1.png" alt="screen 1"></div>
+                    <div class="slide"><img src="/images/screenshots/screen2.png" alt="screen 2"></div>
+                    <div class="slide"><img src="/images/screenshots/screen3.png" alt="screen 3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2>Key Features</h2>
+                <ul class="feature-grid">
+                    <li><strong>🎨 Cyberpunk Neon Aesthetics</strong><span>Stunning visuals with vibrant neon
+                            effects</span></li>
+                    <li><strong>🏆 Global Leaderboards</strong><span>Compete worldwide</span></li>
+                    <li><strong>🐍 Collectible Snake Skins</strong><span>Unlock 6+ unique designs</span></li>
+                    <li><strong>⚡ Strategic Power-Ups</strong><span>Magnet, Shield, Time Extender</span></li>
+                    <li><strong>🎮 Two Game Modes</strong><span>Level & Endless modes</span></li>
+                    <li><strong>💎 Daily Rewards</strong><span>Free coins & gems every day</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="modes">
+            <div class="container">
+                <h2>Game Modes</h2>
+                <div class="modes-grid">
+                    <div class="mode">
+                        <h3>LEVEL MODE</h3>
+                        <ul>
+                            <li>50+ Progressive Levels</li>
+                            <li>Increasing Difficulty</li>
+                            <li>Unlock New Worlds</li>
+                            <li>Boss Encounters</li>
+                        </ul>
+                    </div>
+                    <div class="mode">
+                        <h3>ENDLESS MODE</h3>
+                        <ul>
+                            <li>Infinite Challenge</li>
+                            <li>High Score Chase</li>
+                            <li>Global Rankings</li>
+                            <li>Ultimate Test</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>CyberSnake</strong>
+                <p>© 2025 CyberSnake. All rights reserved.</p>
+            </div>
+            <div class="footer-links">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="mailto:support@cybersnake.app">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // language menu toggle and persistence
+        (function () {
+            const compact = document.getElementById('header-lang');
+            const toggle = document.getElementById('lang-toggle');
+            const menu = document.getElementById('lang-menu');
+            const current = document.getElementById('current-lang');
+
+            function setLangLabel(lang) { current.textContent = (lang === 'tr') ? 'TR' : 'EN'; }
+
+            // restore lang from localStorage
+            const saved = localStorage.getItem('cybersnake_lang');
+            if (saved) setLangLabel(saved);
+
+            toggle.addEventListener('click', (e) => {
+                compact.classList.toggle('open');
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+            });
+
+            menu.querySelectorAll('a[data-lang]').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const lang = a.dataset.lang;
+                    localStorage.setItem('cybersnake_lang', lang);
+                    // Navigate to the selected language page
+                    window.location.href = a.getAttribute('href');
+                })
+            });
+
+            // close on outside click
+            document.addEventListener('click', (ev) => { if (!compact.contains(ev.target)) { compact.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); } });
+        })();
+    </script>
+</body>
+
+</html>

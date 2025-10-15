@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy Policy — CyberSnake</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animations.css">
+    <meta name="description"
+        content="CyberSnake privacy policy. What we collect, why we collect it, and how you can exercise your rights.">
+    <link rel="icon" type="image/png" href="/assets/icon.png">
+    <style>
+        .lang-switch {
+            margin-top: 0.5rem;
+        }
+
+        .lang-switch a {
+            margin-right: 0.75rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="/">
+                <img src="/assets/icon.png" alt="CyberSnake logo" width="40" height="40">
+                <span class="brand">CyberSnake</span>
+            </a>
+            <nav class="nav">
+                <a href="/">Home</a>
+            </nav>
+            <div class="lang-compact" aria-haspopup="true">
+                <button aria-expanded="false" aria-controls="lang-menu-pp">
+                    <img src="/assets/icon.png" alt="Lang" />
+                    <span>EN</span>
+                </button>
+                <div class="lang-menu" id="lang-menu-pp" role="menu">
+                    <a href="/privacy-policy.html" data-lang="en" role="menuitem">English</a>
+                    <a href="/privacy-policy.tr.html" data-lang="tr" role="menuitem">Türkçe</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container privacy">
+        <a href="/" class="back-button" aria-label="Back to home">← Back to Home</a>
+
+        <h1>Privacy Policy</h1>
+        <p><strong>Effective Date:</strong> October 15, 2025</p>
+
+        <h2>1. Introduction</h2>
+        <p>Welcome to CyberSnake. We value your privacy and are committed to protecting your personal data. This policy
+            explains what information we collect, how we use it, with whom we share it, and the choices you have
+            regarding your information.</p>
+
+        <h2>2. Information We Collect</h2>
+        <h3>2.1 Account and Gameplay Information</h3>
+        <ul>
+            <li>Username and profile information</li>
+            <li>Game progress, scores and achievements</li>
+            <li>In-app purchase receipts (when applicable)</li>
+        </ul>
+
+        <h3>2.2 Device and Technical Information</h3>
+        <ul>
+            <li>Device model and OS version</li>
+            <li>App version</li>
+            <li>Device identifiers (for analytics and advertising)</li>
+            <li>Crash logs and diagnostic data</li>
+        </ul>
+
+        <h3>2.3 Analytics and Advertising Data</h3>
+        <ul>
+            <li>Ad interactions and impressions</li>
+            <li>Usage patterns and aggregated behavior (anonymized)</li>
+        </ul>
+
+        <h2>3. How We Use Your Information</h2>
+        <p>We use collected data to operate and improve the game, provide personalized features, analyze usage, serve
+            ads (where permitted), and communicate with you about updates and support.</p>
+
+        <h2>4. Third-Party Services</h2>
+        <p>We may share data with third-party service providers who perform services on our behalf, including analytics,
+            advertising, push notifications, and hosting. These providers are contractually obligated to protect your
+            information.</p>
+
+        <h2>5. Cookies and Similar Technologies</h2>
+        <p>Our website may use cookies and similar technologies to remember preferences, analyze traffic, and deliver
+            advertising. You can control cookie settings via your browser.</p>
+
+        <h2>6. Data Sharing</h2>
+        <p>We do not sell personal information. We may disclose data to service providers, legal authorities when
+            required, or in connection with business transfers.</p>
+
+        <h2>7. Data Retention</h2>
+        <p>We retain data as long as necessary to provide the service and for legitimate business purposes, including
+            compliance with legal obligations. Account deletion requests are typically processed within 30 days.</p>
+
+        <h2>8. Security</h2>
+        <p>We implement reasonable security measures to protect your data. However no system is 100% secure; we
+            encourage careful handling of sensitive information.</p>
+
+        <h2>9. Children</h2>
+        <p>Our app is not intended for children under 13. We do not knowingly collect personal data from children under
+            13 without parental consent.</p>
+
+        <h2>10. International Transfers</h2>
+        <p>Data may be transferred to and processed in countries other than your residence. Such transfers comply with
+            applicable law.</p>
+
+        <h2>11. Your Rights</h2>
+        <p>Depending on your jurisdiction, you may have rights to access, correct, delete, or restrict processing of
+            your personal data. To exercise these rights, contact us using the details below.</p>
+
+        <h2>12. Contact</h2>
+        <p>Email: <a href="mailto:privacy@cybersnake.app">privacy@cybersnake.app</a></p>
+
+        <h2>13. Changes to this Policy</h2>
+        <p>We may update this policy from time to time. Significant changes will be posted with a revised effective
+            date.</p>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div>
+                <strong>CyberSnake</strong>
+            </div>
+            <div class="footer-links">
+                <a href="/">Home</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // language menu toggle
+        (function () {
+            const compact = document.querySelector('.lang-compact');
+            const toggle = compact.querySelector('button');
+            const menu = compact.querySelector('.lang-menu');
+
+            toggle.addEventListener('click', (e) => {
+                compact.classList.toggle('open');
+                const expanded = toggle.getAttribute('aria-expanded') === 'true';
+                toggle.setAttribute('aria-expanded', String(!expanded));
+            });
+
+            menu.querySelectorAll('a[data-lang]').forEach(a => {
+                a.addEventListener('click', (e) => {
+                    const lang = a.dataset.lang;
+                    localStorage.setItem('cybersnake_lang', lang);
+                    // Navigate to the selected language page
+                    window.location.href = a.getAttribute('href');
+                })
+            });
+
+            // close on outside click
+            document.addEventListener('click', (ev) => {
+                if (!compact.contains(ev.target)) {
+                    compact.classList.remove('open');
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
