@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://cybersnake.app/sitemap.xml
+Sitemap: https://cybersnake.hasanali.space/sitemap.xml
 User-agent: Google-adstxt
 Disallow: 
  

@@ -1,3 +1,9 @@
+// Redirect www to apex domain (client-side fallback)
+if (location.hostname === 'www.cybersnake.hasanali.space') {
+    const target = 'https://cybersnake.hasanali.space' + location.pathname + location.search + location.hash;
+    location.replace(target);
+}
+
 // Simple download tracking and carousel behavior
 const APP_STORE_URL = "https://apps.apple.com/app/cybersnake/id[YOUR_APP_ID]";
 const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=space.hasanali.cybersnake";
